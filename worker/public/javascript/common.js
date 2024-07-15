@@ -379,6 +379,14 @@ function newSiteFormSubmit( $ ){
 	if( newSiteCloneSourceSiteId !== '' ){
 		paramteres['clone-source-site-id'] = newSiteCloneSourceSiteId;
 	}
+  
+  
+  var donotUseGitMainBranch = $( '#donotUseGitMainBranch' ).val();
+	if( donotUseGitMainBranch == '1' ){
+		paramteres['clone-dont-use-git-main-branch'] = '1';
+	}else{
+    paramteres['clone-dont-use-git-main-branch'] = '0';
+  }
 	
 	var newSiteWpVer = $( '#newSiteWpVer' ).val();
 	if( newSiteWpVer !== '' ){
